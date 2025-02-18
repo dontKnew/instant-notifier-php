@@ -1,0 +1,42 @@
+{
+    "name": "phpmaster/instantnotifier",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "description": "A real-time notification library to send and receive updates about leads, messages, and other events in android phone.",
+    "keywords": [
+        "php",
+        "real-time",
+        "notifications",
+        "instant-notifier",
+        "leads",
+        "messages",
+        "push-notifications",
+        "api-integration"
+    ],
+    "homepage": "https://instantnotifier.phpmaster.in/",
+    "autoload": {
+        "psr-4": {
+            "PHPMaster\\InstantNotifier\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "phpmaster",
+            "email": "support@phpmaster.in",
+            "homepage": "https://phpmaster.in",
+            "role": "Developer"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^12.0"
+    },
+    "support": {
+        "issues": "https://github.com/phpmaster/instantnotifier/issues",
+        "source": "https://github.com/phpmaster/instantnotifier"
+    },
+    "require": {
+        "php": ">=7.4"
+    },
+    "minimum-stability": "stable"
+}
