@@ -16,11 +16,11 @@ class Notification {
         return "\n".$heading . "\n" . $this->lineMessageFromArray($data);
     }
 
-    public function send($message) {
+    public function send($title, $message) {
         $payload = [
             "api_key" => $this->api_key,
             "client_id" => $this->client_id,
-            "title" => "Digitech Site Enquiry Details",
+            "title" => $title,
             "message"=>$message,
         ];
         return $this->sendRequest($payload, "/notifications");
