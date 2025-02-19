@@ -58,17 +58,14 @@ class Notification {
             if ($response === false) {
                 throw new \Exception(curl_error($curl));
             }
-
+            if(json_decode($response) === null){
+                return ['success' => false, 'message' => 'Invalid response from server'];
+            }
             $response = json_decode($response, true);
             curl_close($curl);
-
-            if (isset($response['success']) && $response['success']) {
-                return ["status" => 200, "message" => $response['message']];
-            } else {
-                return ["status" => 404, "message" => $response['message'] ?? 'Error processing request'];
-            }
+            return $response;
         } catch (\Exception $e) {
-            return ["status" => 404, "message" => $e->getMessage()];
+            return ["success" => false, "message" => $e->getMessage()];
         }
     }
 
